@@ -61,8 +61,7 @@ def generate_hw02(question):
             for holiday in holidays:
                 date = holiday["date"]["iso"]
                 name = holiday["name"]
-                translated_name = translate_text(name)
-                formatted_data.append({"date": date, "name": translated_name})
+                formatted_data.append({"date": date, "name": name})
             result = {"Result": formatted_data}
             return json.dumps(result, ensure_ascii=False, indent=2)
         else:
